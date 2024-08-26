@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyButton.dart';
+import 'package:flutter_application_1/SquareTile.dart';
 import 'package:flutter_application_1/myTextFeild.dart';
 
 class Myhomepage extends StatelessWidget {
@@ -34,14 +35,14 @@ class Myhomepage extends StatelessWidget {
                 style: TextStyle(color: Colors.grey, fontSize: 16),
               ),
               const SizedBox(
-                height: 50,
+                height: 40,
               ),
               Mytextfeild(
                   controller: usernamecontroller,
                   hintText: 'Username',
                   obscureText: false),
               const SizedBox(
-                height: 50,
+                height: 10,
               ),
               Mytextfeild(
                   controller: passwordcontroller,
@@ -81,10 +82,42 @@ class Myhomepage extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                        child:
-                            Divider(thickness: 0.5, color: Colors.grey[400])),
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
                   ],
                 ),
+              ),
+              const SizedBox(height: 50),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Squaretile(ImagePath: 'assets/images/google.png'),
+                  SizedBox(
+                    width: 25,
+                  ),
+                  Squaretile(ImagePath: 'assets/images/apple1.png'),
+                ],
+              ),
+              const SizedBox(height: 50),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Not a member?',
+                    style: TextStyle(color: Colors.grey[700]),
+                  ),
+                  const SizedBox(
+                    width: 4,
+                  ),
+                  const Text(
+                    'Register Now',
+                    style: TextStyle(
+                        color: Colors.blue, fontWeight: FontWeight.bold),
+                  )
+                ],
               )
             ],
           ),
