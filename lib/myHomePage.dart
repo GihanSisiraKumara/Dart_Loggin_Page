@@ -62,6 +62,30 @@ class Myhomepage extends StatelessWidget {
               ),
               const SizedBox(height: 25),
               Mybutton(onTap: signnupIn),
+              const SizedBox(height: 50),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text(
+                        'OR Conntinu with',
+                        style: TextStyle(color: Colors.grey[700]),
+                      ),
+                    ),
+                    Expanded(
+                        child:
+                            Divider(thickness: 0.5, color: Colors.grey[400])),
+                  ],
+                ),
+              )
             ],
           ),
         ),
