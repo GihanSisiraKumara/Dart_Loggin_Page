@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/MyButton.dart';
 import 'package:flutter_application_1/myTextFeild.dart';
 
 class Myhomepage extends StatelessWidget {
@@ -6,6 +7,8 @@ class Myhomepage extends StatelessWidget {
 
   final usernamecontroller = TextEditingController();
   final passwordcontroller = TextEditingController();
+
+  void signnupIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +46,22 @@ class Myhomepage extends StatelessWidget {
               Mytextfeild(
                   controller: passwordcontroller,
                   hintText: 'Password',
-                  obscureText: false)
+                  obscureText: true),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Forgot Password?',
+                      style: TextStyle(color: Colors.grey[600]),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 25),
+              Mybutton(onTap: signnupIn),
             ],
           ),
         ),
